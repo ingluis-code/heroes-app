@@ -1,0 +1,16 @@
+<h1>Searching: <small>{{name}}</small> </h1>
+<hr>
+
+<div *ngIf="heroes.length == 0" class="row animated fadeIn fast">
+  <div class="col-md-12">
+    <div class="alert alert-info" role="alert">
+       No existen resultados con el termino: {{name}}
+    </div>
+  </div>
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  <app-hero-target [heroe]="heroe" [index]="heroe.id" *ngFor="let heroe of heroes; let i = index"></app-hero-target>
+
+</div>

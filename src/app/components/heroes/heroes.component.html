@@ -1,0 +1,9 @@
+<h1>Heroes <small>Marvel</small> </h1>
+<hr>
+
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+               <!--@Input          @Input      @Output                                                      Posicion en el nuevo arreglo-->                              
+  <app-hero-target [heroe]="heroe" [index]="heroe.id" (heroSelected)=verHeroe($event) *ngFor="let heroe of heroes; let i = index"></app-hero-target>
+
+</div>
